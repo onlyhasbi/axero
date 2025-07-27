@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>People Directory - Axero Intranet</title>
+    <link rel="stylesheet" href="../../assets/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="navbar glass-card">
+        <div class="nav-left">
+          <a href="/" class="logo">AXERO</a>
+          <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+
+        <nav class="nav-center" id="navigation-menus">
+          <a href="../../" class="nav-link"
+            ><i class="fas fa-home nav-icon"></i> Home</a
+          >
+          <a href="../../pages/spaces" class="nav-link"
+            ><i class="fas fa-space-shuttle nav-icon"></i> Spaces</a
+          >
+          <a href="../../pages/people/" class="nav-link active"
+            ><i class="fas fa-users nav-icon"></i> People</a
+          >
+          <a href="../../pages/content/" class="nav-link"
+            ><i class="fas fa-file-alt nav-icon"></i> Content</a
+          >
+        </nav>
+
+        <div class="nav-right">
+          <i class="fas fa-bars icon-btn" id="hamburger"></i>
+          <i class="fas fa-bell icon-btn" id="bellIcon"></i>
+          <img
+            src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+            alt="User Avatar"
+            class="avatar"
+          />
+        </div>
+      </header>
+
+      <div class="page-header glass-card">
+        <div class="header-content">
+          <h1>People Directory</h1>
+          <p>Find and connect with colleagues across the company.</p>
+        </div>
+        <div class="controls-container">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search by name or title..."
+            />
+          </div>
+          <div class="filter-box">
+            <select id="department-filter">
+              <option value="all">All Departments</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Design">Design</option>
+              <option value="HR">HR</option>
+            </select>
+          </div>
+          <div class="view-toggle">
+            <button
+              class="icon-btn active"
+              id="grid-view-btn"
+              title="Grid View"
+            >
+              <i class="fas fa-th-large"></i>
+            </button>
+            <button class="icon-btn" id="list-view-btn" title="List View">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <main class="people-container grid-view" id="people-container"></main>
+    </div>
+
+    <div class="modal-container" id="profile-modal-container">
+      <div class="modal-content glass-card" id="profile-modal-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+     <script src="../../assets/main.js"></script>
+  </body>
+</html>

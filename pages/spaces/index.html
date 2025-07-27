@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Spaces - Axero Intranet</title>
+    <link rel="stylesheet" href="../../assets/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="navbar glass-card">
+        <div class="nav-left">
+          <a href="/" class="logo">AXERO</a>
+          <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+
+        <nav class="nav-center" id="navigation-menus">
+          <a href="../../" class="nav-link"
+            ><i class="fas fa-home nav-icon"></i> Home</a
+          >
+          <a href="../../pages/spaces" class="nav-link active"
+            ><i class="fas fa-space-shuttle nav-icon"></i> Spaces</a
+          >
+          <a href="../../pages/people/" class="nav-link"
+            ><i class="fas fa-users nav-icon"></i> People</a
+          >
+          <a href="../../pages/content/" class="nav-link"
+            ><i class="fas fa-file-alt nav-icon"></i> Content</a
+          >
+        </nav>
+
+        <div class="nav-right">
+          <i class="fas fa-bars icon-btn" id="hamburger"></i>
+          <i class="fas fa-bell icon-btn" id="bellIcon"></i>
+          <img
+            src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+            alt="User Avatar"
+            class="avatar"
+          />
+        </div>
+      </header>
+
+      <div class="page-header glass-card">
+        <div class="header-content">
+          <h1>Company Spaces</h1>
+          <p>
+            Discover, join, and collaborate in spaces across the organization.
+          </p>
+        </div>
+        <div class="controls-container">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search for a space..."
+            />
+          </div>
+          <div class="filter-box">
+            <select id="filter-select">
+              <option value="all">All Categories</option>
+              <option value="department">Departments</option>
+              <option value="project">Projects</option>
+              <option value="social">Social Groups</option>
+            </select>
+          </div>
+          <button class="create-btn">
+            <i class="fas fa-plus"></i> Create Space
+          </button>
+        </div>
+      </div>
+
+      <main class="space-grid" id="space-grid"></main>
+    </div>
+    <div class="modal-container" id="modal-container">
+      <div class="modal-content glass-card" id="modal-content">
+        <div class="modal-header">
+          <h2>Create a New Space</h2>
+          <button class="close-btn" id="close-modal-btn">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <form id="create-space-form" class="modal-form">
+          <div class="form-group">
+            <label for="space-name">Space Name</label>
+            <input
+              type="text"
+              id="space-name"
+              placeholder="e.g., Q4 Marketing Campaign"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="space-description">Description</label>
+            <textarea
+              id="space-description"
+              rows="3"
+              placeholder="A brief summary of the space's purpose."
+              required
+            ></textarea>
+          </div>
+          <div class="form-group-row">
+            <div class="form-group">
+              <label for="space-category">Category</label>
+              <select id="space-category" required>
+                <option value="project">Project</option>
+                <option value="department">Department</option>
+                <option value="social">Social</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="space-icon">Font Awesome Icon</label>
+              <input
+                type="text"
+                id="space-icon"
+                placeholder="e.g., fa-rocket"
+                required
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="submit-btn">Create Space</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+     <script src="../../assets/main.js"></script>
+  </body>
+</html>

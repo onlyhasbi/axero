@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Axero Intranet - Revamped</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="navbar glass-card">
+        <div class="nav-left">
+          <a href="/" class="logo">AXERO</a>
+          <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search..." />
+          </div>
+        </div>
+
+        <nav class="nav-center" id="navigation-menus">
+          <a href="." class="nav-link active"
+            ><i class="fas fa-home nav-icon"></i> Home</a
+          >
+          <a href="./pages/spaces" class="nav-link"
+            ><i class="fas fa-space-shuttle nav-icon"></i> Spaces</a
+          >
+          <a href="./pages/people/" class="nav-link"
+            ><i class="fas fa-users nav-icon"></i> People</a
+          >
+          <a href="./pages/content/" class="nav-link"
+            ><i class="fas fa-file-alt nav-icon"></i> Content</a
+          >
+        </nav>
+
+        <div class="nav-right">
+          <i class="fas fa-bars icon-btn" id="hamburger"></i>
+          <i class="fas fa-bell icon-btn" id="bellIcon"></i>
+          <img
+            src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+            alt="User Avatar"
+            class="avatar"
+          />
+        </div>
+      </header>
+
+      <main class="bento-grid">
+        <section class="bento-box greeting" id="greeting-box">
+          <div class="clock">
+            <span id="time">14:09</span>
+            <span id="date">Saturday, 26 July</span>
+          </div>
+          <h2 id="greeting-message">Good Afternoon, User!</h2>
+          <p>Here’s your daily brief at a glance.</p>
+        </section>
+
+        <section class="bento-box quick-links">
+          <div class="box-header">
+            <h3>Quick Links</h3>
+            <i class="fas fa-link"></i>
+          </div>
+          <ul id="quick-links-list"></ul>
+        </section>
+
+        <section class="bento-box announcements">
+          <div class="box-header">
+            <h3>Announcements</h3>
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <h4>Share Your WFH Workstation Setup!</h4>
+          <p>
+            The new staff photo competition is here. Send us your best photos by
+            August 31st to win prizes.
+          </p>
+          <a href="#" class="learn-more"
+            >Read More <i class="fas fa-arrow-right"></i
+          ></a>
+        </section>
+
+        <section class="bento-box events">
+          <div class="box-header">
+            <h3>Upcoming Events</h3>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div id="event-list"></div>
+        </section>
+
+        <section class="bento-box launch-pad">
+          <div class="box-header">
+            <h3>Launch Pad</h3>
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div id="apps-grid"></div>
+        </section>
+
+        <section class="bento-box new-hires">
+          <div class="box-header">
+            <h3>Welcome Aboard!</h3>
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="hires-scroller" id="hires-grid"></div>
+        </section>
+      </main>
+    </div>
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
